@@ -5,7 +5,9 @@ namespace herbglitch {
         player = new Player(data);
     }
 
-    Game::~Game(){ delete player; }
+    Game::~Game(){ 
+        delete player;
+    }
 
     void Game::update(){
         player->update();

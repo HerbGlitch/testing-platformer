@@ -15,4 +15,4 @@ game:
 	cd src/compiled && g++ -isystem../../src/include -c ../../platformer/game/player/player.cpp -o player.o -Wall -Werror
 
 link:
-	g++ src/compiled/*.o -o main -Lsrc/lib -lsfml-graphics -lsfml-window -lsfml-system -lboost_system-mgw92-1_61 -lboost_thread-mgw92-mt-1_61 -lboost_chrono-mgw92-1_61
+	g++ src/compiled/*.o -o main -Lsrc/lib -lsfml-graphics -lsfml-window -lsfml-system

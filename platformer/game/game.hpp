@@ -1,5 +1,6 @@
 #pragma once
 #include <ge/ge.hpp>
+#include <stdio.h>
 #include "player/player.hpp"
 
 namespace herbglitch {

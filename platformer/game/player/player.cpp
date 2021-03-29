@@ -1,4 +1,5 @@
 #include "player.hpp"
+#include <stdio.h>
 
 namespace herbglitch {
     Player::Player(ge::Data *data): ge::platformer::Entity(data){

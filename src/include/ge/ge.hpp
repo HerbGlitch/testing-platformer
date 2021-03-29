@@ -4,7 +4,6 @@
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <iostream>
-#include <boost/thread.hpp>
 #include "state/state.hpp"
 #include "resource/resource.hpp"
 #include "resource/texture.hpp"
@@ -46,8 +45,6 @@ namespace ge {
     }
 
     inline void Run(Data *data, unsigned int width, unsigned int height, const char *title, float UPS = 1.0f / 60.0f){
-        boost::thread input(boost::bind(&Input, data));
-
         sf::Clock clock;
 
         data->window.create(sf::VideoMode(sf::VideoMode::getDesktopMode()), title, sf::Style::Fullscreen);
@@ -70,8 +67,6 @@ namespace ge {
             data->state.render();
             data->window.display();
         }
-
-        input.join();
     }
 }
 
